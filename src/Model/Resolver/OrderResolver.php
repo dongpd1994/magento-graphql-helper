@@ -1,11 +1,13 @@
 <?php
-
 /**
- * Magento GraphQl Helper
+ * ScandiPWA - Progressive Web App for Magento
  *
+ * Copyright © Scandiweb, Inc. All rights reserved.
  * See LICENSE for license details.
  *
- * @license MIT
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/quote-graphql
+ * @link https://github.com/scandipwa/quote-graphql
  */
 
 declare(strict_types=1);
@@ -15,6 +17,7 @@ namespace Nri\MagentoGraphqlHelper\Model\Resolver;
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
+use Magento\Sales\Model\ResourceModel\Order\CollectionFactoryInterface;
 use ScandiPWA\QuoteGraphQl\Model\Customer\CheckCustomerAccount;
 use Magento\Framework\GraphQl\Exception\GraphQlNoSuchEntityException;
 use Magento\Sales\Model\OrderRepository;
@@ -22,8 +25,13 @@ use Magento\Sales\Model\OrderRepository;
 /**
  * Orders data resolver
  */
-class ExpandedOrderResolver implements ResolverInterface
+class OrderResolver implements ResolverInterface
 {
+  /**
+   * @var CollectionFactoryInterface
+   */
+   protected $collectionFactory;
+   
   /**
    * @var CheckCustomerAccount
    */
@@ -40,9 +48,11 @@ class ExpandedOrderResolver implements ResolverInterface
    * @param OrderRepository $orderRepository
    */
   public function __construct(
+    CollectionFactoryInterface $collectionFactory,
     CheckCustomerAccount $checkCustomerAccount,
     OrderRepository $orderRepository
   ) {
+	$this->collectionFactory = $collectionFactory;
     $this->checkCustomerAccount = $checkCustomerAccount;
     $this->orderRepository = $orderRepository;
   }
