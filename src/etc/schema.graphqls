@@ -9,7 +9,7 @@
 # See COPYING.txt for license details.
 
 type Query {
-    getMoreInfoOrderById(id: Int!): Order @resolver(class: "\\Nri\\MagentoGraphqlHelper\\Model\\Resolver\\ExpandedOrderResolver") @doc(description: "The Sales Order query returns more information about a Sales order")
+    getMoreInfoOrderById(id: Int!): Order @resolver(class: "\\Nri\\MagentoGraphqlHelper\\Model\\Resolver\\OrderResolver") @doc(description: "The Sales Order query returns more information about a Sales order")
 }
 
 type Mutation {
