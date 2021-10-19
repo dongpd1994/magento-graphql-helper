@@ -1,0 +1,39 @@
+{
+  "name": "nri/magento-graphql-helper",
+  "description": "More power for graphql Magento 2.",
+  "license": "MIT",
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "src/registration.php"
+    ],
+    "psr-4": {
+      "Nri\\MagentoGraphqlHelper\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "phamdongdong",
+      "email": "dong.pd1994@outlook.com"
+    }
+  ],
+  "require": {
+    "magento/framework": "*",
+    "magento/module-authorization": "*",
+    "magento/module-customer": "*",
+    "magento/module-webapi": "*",
+    "magento/module-sales": "*",
+    "magento/module-integration": "*",
+    "magento/module-catalog-rule": "*",
+    "magento/module-checkout": "*",
+    "magento/module-inventory-configuration-api": "*",
+    "magento/module-inventory-reservations-api": "*",
+    "magento/module-inventory-sales-api": "*",
+    "magento/module-quote": "*",
+    "magento/module-bundle": "*",
+    "magento/module-quote-graph-ql": "^100.3",
+    "magento/module-bundle-graph-ql": "^100.3",
+    "scandipwa/performance": "^1.0",
+    "scandipwa/quote-graphql": "*"
+  }
+}
