@@ -35,5 +35,7 @@
     "magento/module-bundle-graph-ql": "^100.3",
     "scandipwa/performance": "^1.0",
     "scandipwa/quote-graphql": "*"
-  }
+  },
+   "minimum-stability": "dev", 
+   "prefer-stable": true
 }
