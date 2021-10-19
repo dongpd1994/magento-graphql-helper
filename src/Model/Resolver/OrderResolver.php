@@ -1,13 +1,11 @@
 <?php
 /**
- * ScandiPWA - Progressive Web App for Magento
+ * Magento GraphQl Helper
  *
- * Copyright © Scandiweb, Inc. All rights reserved.
  * See LICENSE for license details.
  *
- * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
- * @package scandipwa/quote-graphql
- * @link https://github.com/scandipwa/quote-graphql
+ * @license MIT
+ * @link https://github.com/dongpd1994/magento-graphql-helper
  */
 
 declare(strict_types=1);
